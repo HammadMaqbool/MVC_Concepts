@@ -1,0 +1,43 @@
+﻿@using DummyProj.ViewModel
+@model StudentTchrVM
+
+<h1>
+    This is the Index View
+</h1>
+
+<h3>
+    This is the Teacher record
+</h3>
+@Model.myTeacher.ID
+@Model.myTeacher.Name
+
+<hr />
+<h3>All Students Record</h3>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>
+            Father Name
+        </td>
+        <td>
+            Class
+        </td>
+    </tr>
+    @foreach (var item in @Model.myStudent)
+    {
+        <tr>
+        <td>@item.ID</td>
+        <td>@item.Name</td>
+        <td>
+            @item.FatherName
+        </td>
+        <td>
+            @item.Class
+        </td>
+    </tr>
+    }
+     
+</table>
+
+
